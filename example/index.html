@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="../lib/jquery.js"></script>
+	<script src="../lib/underscore-min.js"></script>
+	<script src="../jquery.rnbox.js"></script>
+	<script>
+		$(function(){
+			$(".target-list li img").rnbox({
+				//template:"#template-rnbox",
+				template:[{over:0,template:"#template-rnbox-sp"},{over:540,template:"#template-rnbox"}],
+				root: "#wrap"
+			});
+		});
+	</script>
+	<style>
+		.sp .rnbox-control,
+		.sp .rnbox-close{
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.sp .rnbox-prev{
+			left: 0;
+		}
+		.sp .rnbox-next{
+			right: 0;
+		}
+	</style>
+	<script type="text/template" id="template-rnbox">
+		<div id="rnbox-container">
+			<div id="rnbox-content">
+				<ul class="rnbox-control">
+					<li><a href="javascript:void(0);" class="rnbox-prev">prev</a></li>
+					<li><a href="javascript:void(0);" class="rnbox-next">next</a></li>
+				</ul>
+				<p class="rnbox-close"><a href="javascript:void(0);">close</a></p>
+				<img id="rnbox-image" src="<%= rel %>" width="400" height="320" />
+				<!-- 画像をサイズ指定で表示する場合
+				<img id="rnbox-image" src="<%= rel %>" width="400" height="320" />
+				-->
+				<!-- 画像を原寸で表示 
+				<img id="rnbox-image" src="<%= rel %>" />
+				-->
+				<!-- 画像をウィンドウにフィットして表示 
+				<img id="rnbox-image" class="rnbox-image-fit" src="<%= rel %>" />
+				-->
+			</div>
+		</div>
+	</script>
+	<script type="text/template" id="template-rnbox-sp">
+		<div id="rnbox-container" class="sp">
+			<div id="rnbox-content">
+				<ul class="rnbox-control">
+					<li class="rnbox-prev"><a href="javascript:void(0);">prev</a></li>
+					<li class="rnbox-next"><a href="javascript:void(0);">next</a></li>
+				</ul>
+				<p class="rnbox-close"><a href="javascript:void(0);">close</a></p>
+				<img id="rnbox-image" class="rnbox-image-fit" src="<%= rel %>" />
+			</div>
+		</div>
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<ul class="target-list">
+			<li><a href="javascript:void(0);"><img src="http://goo.gl/AcwJu" rel="http://goo.gl/AcwJu" alt="cat" width="15%" height="15%" data-rnbox-group="siblings-list" /></a></li>
+			<li><a href="javascript:void(0);"><img src="http://goo.gl/Xg1t9" rel="http://goo.gl/Xg1t9" alt="cat" width="15%" height="15%" data-rnbox-group="siblings-list"  /></a></li>
+			<li><a href="javascript:void(0);"><img src="http://goo.gl/AzfDH" rel="http://goo.gl/AzfDH" alt="cat" width="15%" height="15%" data-rnbox-group="siblings-list"  /></a></li>
+		</ul>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<ul class="target-list">
+			<li><a href="javascript:void(0);"><img src="http://goo.gl/Xg1t9" rel="http://goo.gl/Xg1t9" alt="cat" width="15%" height="15%" data-rnbox-group="siblings-list"  /></a></li>
+		</ul>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<ul class="target-list">
+			<li><a href="javascript:void(0);"><img src="http://goo.gl/AcwJu" rel="http://goo.gl/AcwJu" alt="cat" width="15%" height="15%" /></a></li>
+			<li><a href="javascript:void(0);"><img src="http://goo.gl/AcwJu" rel="http://goo.gl/AcwJu" alt="cat" width="15%" height="15%" /></a></li>
+			<li><a href="javascript:void(0);"><img src="http://goo.gl/AcwJu" rel="http://goo.gl/AcwJu" alt="cat" width="15%" height="15%" /></a></li>
+		</ul>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaa</p>
+	</div>
+</body>
+</html>
